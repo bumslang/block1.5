@@ -1,3 +1,4 @@
+
 *{
     box-sizing: border-box;
     margin: 0;
@@ -8,23 +9,10 @@
     font-family: "TT Lakes";
       src: url("TTLakes/TTLakes-Regular.woff") format("woff");
     }
-.swiper-slide__item{
-    background: #FFFFFF;
-    border: 1px solid #EAEAEA;
-    box-sizing: border-box;
-    border-radius: 6px;
-    width: 240px;
-    height: 72px;
-    display: flex;
-    justify-content: space-around;
-    margin: 12px;
-    
+.brends{
+    background: #F2F2F2;
 }
-.swiper-slide__link{
-    align-self: center;
-}
-
-.swiper-caption{
+.brends__caption{
     font-size: 16px;
     line-height: 24px;
     letter-spacing: -0.2px;
@@ -35,11 +23,29 @@
     background: linear-gradient(270deg, #F8F8F8 0%, #FFFFFF 98.61%);
    
 }
-.swiper-wrapper--height, .swiper-slide--height{
-    height: 154px;
-    background: #F2F2F2;
 
+.brends__elem{
+    height: 155px;
+    background-color: #F2F2F2;
+    display: flex;
+    
+    
 }
+.brends__item{
+    background: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    box-sizing: border-box;
+    border-radius: 6px;
+    width: 224px;
+    height: 72px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.brends__link{
+    align-self: center;
+}
+
 .show-more{
     display: flex;
     width: 100%;
@@ -63,27 +69,35 @@
     transition-duration: 0.3s;
 }
 
-.brends{
-    background: #F2F2F2;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-}
-.brends__sizes{
-    padding: 24px 12px;
-}
-
-.swiper-slide__item{
-    width: 224px;
-}
-
-.brends__item--hide{
-    display: none;
-}
 
 @media (min-width: 768px){
+    .brends__elem{
+        height: auto;
+        margin: 12px;
+       
+    }
+    .brends__wripper{
+        display: flex;
+        flex-wrap: wrap;
+        padding: 12px;
+        height: auto;
+        width: auto;
+    }
     .swiper-pagination{
+        display: none;
+    }
+    .brends__item--hide{
         display: none;
     }
 }
 
+@media (min-width: 1120px){
+    .brends__elem{
+        height: auto;
+        margin: 16px;
+    }
+    .brends__item{
+        width: 240px;
+    }
+    
+}

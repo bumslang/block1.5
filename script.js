@@ -1,6 +1,5 @@
+function getBrends() {
 const slider = document.querySelector('.swiper-container');
-
-
 var swiper = new Swiper('.swiper-container', {
     pagination: {
       el: '.swiper-pagination',
@@ -16,43 +15,43 @@ bigResolution.addListener(hideElem);
 
 
   if (mobile.matches) {
-    addElem()
+    addElem();
   }
   function addElem(){
   if (mobile.matches){
     let swiperSlide = document.querySelectorAll('.swiper-slide');
     let sliderContainer = document.querySelector('.slider-container');
     let swiperWripper = document.querySelector('.swiper-wrapper');
-    let swiperContainer = document.querySelector('.swiper-container')
+    let swiperContainer = document.querySelector('.swiper-container');
     for (let i = 0; i < swiperSlide.length; i++) {
         swiperSlide[i].classList.remove('swiper-slide');
-        swiperSlide[i].removeAttribute("style")
+        swiperSlide[i].removeAttribute("style");
     }
-    sliderContainer.classList.remove('slider-container')
+    sliderContainer.classList.remove('slider-container');
     sliderContainer.classList.add('brends');
 
-    swiperWripper.classList.remove('swiper-wrapper')
+    swiperWripper.classList.remove('swiper-wrapper');
     swiperWripper.classList.add('brends__wripper');
 
-    swiperContainer.classList.remove('swiper-container')
-    swiperContainer.classList.add('brends__container')
+    swiperContainer.classList.remove('swiper-container');
+    swiperContainer.classList.add('brends__container');
     hideElem()
   } else{
     let swiperSlide = document.querySelectorAll('.brends__elem');
     let brends = document.querySelector('.brends');
     let brendsWripper = document.querySelector('.brends__wripper');
-    let brendsContainer = document.querySelector('.brends__container')
+    let brendsContainer = document.querySelector('.brends__container');
     for (let i = 0; i < swiperSlide.length; i++) {
-        swiperSlide[i].classList.add('swiper-slide')
+        swiperSlide[i].classList.add('swiper-slide');
     } 
-    brends.classList.remove('brends')
-    brends.classList.add('slider-container')
+    brends.classList.remove('brends');
+    brends.classList.add('slider-container');
 
-    brendsWripper.classList.remove('brends__wripper')
+    brendsWripper.classList.remove('brends__wripper');
     brendsWripper.classList.add('swiper-wrapper');
 
     brendsContainer.classList.remove('brends__container');
-    brendsContainer.classList.add('swiper-container')
+    brendsContainer.classList.add('swiper-container');
 
 }
 }
@@ -62,7 +61,7 @@ bigResolution.addListener(hideElem);
 
 
 let showMore = document.querySelector('.show-more');
-showMore.addEventListener("click", showBrends)
+showMore.addEventListener("click", showBrends);
 
 function showBrends(item){
     let brendsItem = document.querySelectorAll(".brends__elem");
@@ -110,3 +109,5 @@ function hideElem(numb) {
       brendsItem[i].classList.add("brends__item--hide");
   }   
 }
+}
+getBrends();

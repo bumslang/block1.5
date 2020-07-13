@@ -1,4 +1,4 @@
-const brendsSlider = document.querySelector('.swiper-container');
+//const brendsSlider = document.querySelector('.swiper-container');
 const mobile = window.matchMedia("(max-width: 767px)");
 
 let swiper;
@@ -9,8 +9,8 @@ destroySlider();
 
 function destroySlider(){
   if (document.body.clientWidth < 768){
-    brendsSlider.textContent = "if"
-    swiper = new Swiper(brendsSlider, {
+    
+    swiper = new Swiper(.swiper-container, {
       slidesPerView: 'auto',
       spaceBetween: 16,
       pagination: {
@@ -19,10 +19,8 @@ function destroySlider(){
       },
     });
   } else if(brendsSlider.classList.contains('swiper-container-initialized') && document.body.clientWidth >= 768){
-    brendsSlider.textContent = "else if"
+    
     swiper.destroy()
-  } else {
-    brendsSlider.textContent = "else"
   }
 }
 

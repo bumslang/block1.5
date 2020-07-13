@@ -2,7 +2,7 @@ const brendsSlider = document.querySelector('.brends__container');
 const mobile = window.matchMedia("(max-width: 767px)");
 let swiper;
 
-mobile.addEventListener('change', destroySlider);
+mobile.addListener(destroySlider);
 
 destroySlider();
 

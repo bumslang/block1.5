@@ -17,7 +17,7 @@ function destroySlider(){
         clickable: true,
       },
     });
-  } else if(brendsSlider.classList.contains('swiper-container-initialized')){
+  } else if(brendsSlider.classList.contains('swiper-container-initialized') && document.body.clientWidth >= 768){
     swiper.destroy()
   }
 }

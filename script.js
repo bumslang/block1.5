@@ -9,6 +9,7 @@ destroySlider();
 
 function destroySlider(){
   if (document.body.clientWidth < 768){
+    brendsSlider.textContent = "if"
     swiper = new Swiper(brendsSlider, {
       slidesPerView: 'auto',
       spaceBetween: 16,
@@ -18,7 +19,10 @@ function destroySlider(){
       },
     });
   } else if(brendsSlider.classList.contains('swiper-container-initialized') && document.body.clientWidth >= 768){
+    brendsSlider.textContent = "else if"
     swiper.destroy()
+  } else {
+    brendsSlider.textContent = "else"
   }
 }
 

@@ -94,7 +94,17 @@
     <p class="show-more__text">Показать все</p>
   </div>
 </section>
- 
+  <script>
+    const brendsSlider = document.querySelector('.brends__container');
+     swiper = new Swiper(brendsSlider, {
+      slidesPerView: 'auto',
+      spaceBetween: 16,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  </script> 
   <script src="swiper.min.js"></script>
   <script src="script.js"></script> 
 </body>

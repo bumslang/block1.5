@@ -8,7 +8,7 @@ mobile.addEventListener('change', destroySlider);
 destroySlider();
 
 function destroySlider(){
-  if (mobile.matches){
+  if (document.body.clientWidth < 768){
     swiper = new Swiper(brendsSlider, {
       slidesPerView: 'auto',
       spaceBetween: 16,

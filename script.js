@@ -1,4 +1,4 @@
-//const brendsSlider = document.querySelector('.swiper-container');
+const brendsSlider = document.querySelector('.swiper-container');
 const mobile = window.matchMedia("(max-width: 767px)");
 
 let swiper;
@@ -10,7 +10,7 @@ destroySlider();
 function destroySlider(){
   if (document.body.clientWidth < 768){
     
-    swiper = new Swiper(.swiper-container, {
+    swiper = new Swiper(brendsSlider, {
       slidesPerView: 'auto',
       spaceBetween: 16,
       pagination: {

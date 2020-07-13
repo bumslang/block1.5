@@ -1,4 +1,4 @@
-const brendsSlider = document.querySelector('.brends__container');
+const brendsSlider = document.querySelector('.swiper-container');
 const mobile = window.matchMedia("(max-width: 767px)");
 
 let swiper;
